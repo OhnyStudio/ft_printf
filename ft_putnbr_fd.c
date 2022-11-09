@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: johnysavard <johnysavard@student.42.fr>    +#+  +:+       +#+        */
+/*   By: jsavard <jsavard@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 14:20:42 by jsavard           #+#    #+#             */
-/*   Updated: 2022/11/01 16:12:42 by johnysavard      ###   ########.fr       */
+/*   Updated: 2022/11/09 08:58:40 by jsavard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,15 +38,10 @@ void	ft_putnbr_fd(long long n, int fd)
 	}
 }
 
-void	ft_putnbr_u_fd(long long n, int fd)
+void	ft_putnbr_u_fd(uintptr_t n, int fd)
 {
 	char	temp;
 
-	if (n < 0)
-	{
-		write(fd, "-", 1);
-		n *= -1;
-	}
 	if (n > 9)
 	{
 		ft_putnbr_fd(n / 10, fd);

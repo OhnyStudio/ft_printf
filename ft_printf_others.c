@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf_others.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: johnysavard <johnysavard@student.42.fr>    +#+  +:+       +#+        */
+/*   By: jsavard <jsavard@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 14:15:30 by jsavard           #+#    #+#             */
-/*   Updated: 2022/11/02 19:51:35 by johnysavard      ###   ########.fr       */
+/*   Updated: 2022/11/09 15:46:43 by jsavard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int	ft_printf_s(char *s)
 	return (i);
 }
 
-int	ft_printf_nb(long long n, int is_unsigned)
+int	ft_printf_nb(uintptr_t n, int is_unsigned)
 {
 	int		len;
 
@@ -45,7 +45,7 @@ int	ft_printf_nb(long long n, int is_unsigned)
 	return (len);
 }
 
-void	ft_putptr(long long nb)
+void	ft_putptr(uintptr_t nb)
 {
 	if (nb >= 16)
 	{
@@ -61,14 +61,17 @@ void	ft_putptr(long long nb)
 	}
 }
 
-int	ft_printf_ptr(long long ptr)
+int	ft_printf_ptr(uintptr_t ptr)
 {
 	int	len;
 
-	len = 0;
-	len += write(1, "0x", 2);
+	len = 2;
+	write(1, "0x", 2);
 	if (ptr == 0)
-		len += write(1, "0", 1);
+	{
+		len++;
+		write(1, "0", 1);
+	}
 	else
 	{
 		ft_putptr(ptr);

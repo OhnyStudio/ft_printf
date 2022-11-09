@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_len.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: johnysavard <johnysavard@student.42.fr>    +#+  +:+       +#+        */
+/*   By: jsavard <jsavard@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/01 15:20:53 by johnysavard       #+#    #+#             */
-/*   Updated: 2022/11/02 19:53:02 by johnysavard      ###   ########.fr       */
+/*   Updated: 2022/11/09 15:51:43 by jsavard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,15 +45,17 @@ int	ft_nb_len(long long nb)
 	return (len);
 }
 
-int	ft_ptr_len(long long nb)
+int	ft_ptr_len(unsigned long long nb)
 {
 	int	len;
 
 	len = 0;
-	while (nb != 0)
+	while (nb > 15)
 	{
 		len++;
 		nb = nb / 16;
 	}
+	if (nb >= 0)
+		len++;
 	return (len);
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: johnysavard <johnysavard@student.42.fr>    +#+  +:+       +#+        */
+/*   By: jsavard <jsavard@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/30 14:13:25 by johnysavard       #+#    #+#             */
-/*   Updated: 2022/11/02 19:55:42 by johnysavard      ###   ########.fr       */
+/*   Updated: 2022/11/09 15:39:54 by jsavard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,9 @@ int	ft_printf(const char *s, ...)
 
 /*int	main(void)
 {
-	printf("%d\n", printf());
-	ft_printf("%d\n",ft_printf());
+	int i = -1;
+
+	printf("%d\n", printf("1 %p\n ", &i));
+	printf("%d\n", ft_printf("2 %p\n ", &i));
 	return (0);
 }*/
