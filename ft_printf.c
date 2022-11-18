@@ -6,12 +6,11 @@
 /*   By: jsavard <jsavard@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/30 14:13:25 by johnysavard       #+#    #+#             */
-/*   Updated: 2022/11/09 15:39:54 by jsavard          ###   ########.fr       */
+/*   Updated: 2022/11/18 10:58:06 by jsavard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include <stdio.h>
 
 int	ft_printf_char(char c)
 {
@@ -67,12 +66,3 @@ int	ft_printf(const char *s, ...)
 	va_end(args);
 	return (len);
 }
-
-/*int	main(void)
-{
-	int i = -1;
-
-	printf("%d\n", printf("1 %p\n ", &i));
-	printf("%d\n", ft_printf("2 %p\n ", &i));
-	return (0);
-}*/
