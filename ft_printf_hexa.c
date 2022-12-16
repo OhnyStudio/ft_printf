@@ -12,7 +12,7 @@
 
 #include "ft_printf.h"
 
-void	ft_puthexa(unsigned int nb, const char type)
+static void	ft_puthexa(unsigned int nb, const char type)
 {
 	if (nb >= 16)
 	{

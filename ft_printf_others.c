@@ -6,7 +6,7 @@
 /*   By: jsavard <jsavard@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 14:15:30 by jsavard           #+#    #+#             */
-/*   Updated: 2022/11/09 15:46:43 by jsavard          ###   ########.fr       */
+/*   Updated: 2022/12/16 12:34:16 by jsavard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ int	ft_printf_nb(uintptr_t n, int is_unsigned)
 	return (len);
 }
 
-void	ft_putptr(uintptr_t nb)
+static void	ft_putptr(uintptr_t nb)
 {
 	if (nb >= 16)
 	{

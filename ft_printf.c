@@ -6,25 +6,25 @@
 /*   By: jsavard <jsavard@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/30 14:13:25 by johnysavard       #+#    #+#             */
-/*   Updated: 2022/11/18 10:59:42 by jsavard          ###   ########.fr       */
+/*   Updated: 2022/12/16 12:35:19 by jsavard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_printf_char(char c)
+static int	ft_printf_char(char c)
 {
 	write(1, &c, 1);
 	return (1);
 }
 
-int	ft_printf_pct(void)
+static int	ft_printf_pct(void)
 {
 	write(1, "%", 1);
 	return (1);
 }
 
-int	ft_check_type(const char *s, va_list args, int i, int len)
+static int	ft_check_type(const char *s, va_list args, int i, int len)
 {
 	while (s[i])
 	{
